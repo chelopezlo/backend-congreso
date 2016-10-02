@@ -105,5 +105,13 @@ class UserActivity extends Model
         
     ];
 
+    public function Activity()
+    {
+        return $this->hasOne('App\Models\Activity');
+    }
+    
+    public function Persona() {
+        return $this->belongsTo('App\Models\Persona');
+    }
     
 }

@@ -94,5 +94,7 @@ class Activity extends Model
         'name' => 'required'
     ];
 
-    
+    public function Persona() {
+        return $this->belongsToMany('App\Models\Persona', 'user_activities');
+    }
 }

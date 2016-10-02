@@ -136,8 +136,9 @@ class Persona extends Model
      */
     public static $rules = [
         'rut' => 'required',
-        'twitter' => 'is_lider boolean radio,Yes:1,No:0'
     ];
-
     
+    public function Activity() {
+        return $this->belongsToMany('App\Models\Activity', 'user_activities')->withPivot('order', 'is_registered');
+    }
 }

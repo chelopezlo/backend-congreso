@@ -156,12 +156,13 @@ class PersonaAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Persona $persona */
-        $persona = $this->personaRepository->find($id);
+        $persona = $this->personaRepository->with('Activity')->find($id);
 
         if (empty($persona)) {
             return $this->sendError('Persona not found');
         }
 
+        //$persona = $this->personaRepository->with('UserActivities');
         return $this->sendResponse($persona->toArray(), 'Persona retrieved successfully');
     }
 
