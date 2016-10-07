@@ -5,6 +5,7 @@
         <th>Color</th>
         <th>Icon</th>
         <th>Is Selectable</th>
+        <th>Activity Type Id</th>
         <th>Created At</th>
         <th>Updated At</th>
         <th colspan="3">Action</th>
@@ -17,6 +18,7 @@
             <td>{!! $activity->color !!}</td>
             <td>{!! $activity->icon !!}</td>
             <td>{!! $activity->is_selectable !!}</td>
+            <td>{!! $activity->activity_type_id !!}</td>
             <td>{!! $activity->created_at !!}</td>
             <td>{!! $activity->updated_at !!}</td>
             <td>

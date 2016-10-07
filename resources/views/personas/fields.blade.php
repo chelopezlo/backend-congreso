@@ -14,10 +14,10 @@
 <div class="form-group col-sm-12">
     {!! Form::label('gender', 'Gender:') !!}
     <label class="radio-inline">
-        {!! Form::radio('gender', "Hombre", null) !!} Hombre
+        {!! Form::radio('gender', "Male", null) !!} Male
     </label>
     <label class="radio-inline">
-        {!! Form::radio('gender', "Mujer", null) !!} Mujer
+        {!! Form::radio('gender', "Female", null) !!} Female
     </label>
 </div>
 
@@ -52,9 +52,9 @@
 </div>
 
 <!-- Description Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('description', 'Description:') !!}
-    {!! Form::text('description', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Facebook Field -->
@@ -67,6 +67,17 @@
 <div class="form-group col-sm-6">
     {!! Form::label('twitter', 'Twitter:') !!}
     {!! Form::text('twitter', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Is Leader Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('is_leader', 'Is Leader:') !!}
+    <label class="radio-inline">
+        {!! Form::radio('is_leader', "1", null) !!} 1
+    </label>
+    <label class="radio-inline">
+        {!! Form::radio('is_leader', "0", null) !!} 0
+    </label>
 </div>
 
 <!-- Submit Field -->

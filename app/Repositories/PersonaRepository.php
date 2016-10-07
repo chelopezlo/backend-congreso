@@ -21,7 +21,10 @@ class PersonaRepository extends BaseRepository
         'email',
         'description',
         'facebook',
-        'twitter'
+        'twitter',
+        'users_id',
+        'is_leader',
+        'iglesias_id'
     ];
 
     /**

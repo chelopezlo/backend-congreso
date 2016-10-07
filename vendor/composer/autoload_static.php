@@ -585,7 +585,7 @@ class ComposerStaticInit7a92bee80058d70d826b0fef7460fefa
         'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
         'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
-        'CreateActivitiesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_01_033343_create_activities_table.php',
+        'CreateActivitiesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_031908_create_activities_table.php',
         'CreateActivitySchedulesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_01_034426_create_activity_schedules_table.php',
         'CreateActivityTypesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_01_021749_create_activity_types_table.php',
         'CreateComunasTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_01_023936_create_comunas_table.php',

@@ -31,10 +31,16 @@ Route::resource('user_types', 'UserTypeAPIController');
 
 Route::resource('user_activity_templates', 'UserActivityTemplateAPIController');
 
-Route::resource('activities', 'ActivityAPIController');
+
 
 Route::resource('user_activities', 'UserActivityAPIController');
 
 Route::resource('activity_schedules', 'ActivityScheduleAPIController');
 
 Route::resource('despositos', 'DespositoAPIController');
+
+
+
+Route::resource('activities', 'ActivityAPIController');
+
+Route::resource('personas', 'PersonaAPIController');

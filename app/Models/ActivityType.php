@@ -81,5 +81,8 @@ class ActivityType extends Model
         'name' => 'required'
     ];
 
-    
+    public function Activity() {
+        return $this->hasMany('App\Models\Activity');
+        
+    }
 }

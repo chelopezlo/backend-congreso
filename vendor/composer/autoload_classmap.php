@@ -188,7 +188,7 @@ return array(
     'Collective\\Html\\HtmlFacade' => $vendorDir . '/laravelcollective/html/src/HtmlFacade.php',
     'Collective\\Html\\HtmlServiceProvider' => $vendorDir . '/laravelcollective/html/src/HtmlServiceProvider.php',
     'Cpdf' => $vendorDir . '/dompdf/dompdf/lib/Cpdf.php',
-    'CreateActivitiesTable' => $baseDir . '/database/migrations/2016_10_01_033343_create_activities_table.php',
+    'CreateActivitiesTable' => $baseDir . '/database/migrations/2016_10_04_031908_create_activities_table.php',
     'CreateActivitySchedulesTable' => $baseDir . '/database/migrations/2016_10_01_034426_create_activity_schedules_table.php',
     'CreateActivityTypesTable' => $baseDir . '/database/migrations/2016_10_01_021749_create_activity_types_table.php',
     'CreateComunasTable' => $baseDir . '/database/migrations/2016_10_01_023936_create_comunas_table.php',

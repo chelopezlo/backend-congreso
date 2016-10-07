@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * @SWG\Definition(
  *      definition="Persona",
- *      required={"rut"},
+ *      required={"rut", "full_name"},
  *      @SWG\Property(
  *          property="id",
  *          description="id",
@@ -28,8 +28,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *      @SWG\Property(
  *          property="gender",
  *          description="gender",
- *          type="integer",
- *          format="int32"
+ *          type="boolean"
  *      ),
  *      @SWG\Property(
  *          property="birthday",
@@ -73,6 +72,23 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          type="string"
  *      ),
  *      @SWG\Property(
+ *          property="users_id",
+ *          description="users_id",
+ *          type="integer",
+ *          format="int32"
+ *      ),
+ *      @SWG\Property(
+ *          property="is_leader",
+ *          description="is_leader",
+ *          type="boolean"
+ *      ),
+ *      @SWG\Property(
+ *          property="iglesias_id",
+ *          description="iglesias_id",
+ *          type="integer",
+ *          format="int32"
+ *      ),
+ *      @SWG\Property(
  *          property="created_at",
  *          description="created_at",
  *          type="string",
@@ -107,7 +123,10 @@ class Persona extends Model
         'email',
         'description',
         'facebook',
-        'twitter'
+        'twitter',
+        'users_id',
+        'is_leader',
+        'iglesias_id'
     ];
 
     /**
@@ -118,7 +137,7 @@ class Persona extends Model
     protected $casts = [
         'rut' => 'string',
         'full_name' => 'string',
-        'gender' => 'integer',
+        'gender' => 'boolean',
         'birthday' => 'date',
         'occupation' => 'string',
         'address' => 'string',
@@ -126,7 +145,10 @@ class Persona extends Model
         'email' => 'string',
         'description' => 'string',
         'facebook' => 'string',
-        'twitter' => 'string'
+        'twitter' => 'string',
+        'users_id' => 'integer',
+        'is_leader' => 'boolean',
+        'iglesias_id' => 'integer'
     ];
 
     /**
@@ -136,9 +158,11 @@ class Persona extends Model
      */
     public static $rules = [
         'rut' => 'required',
+        'full_name' => 'required',
+        'email' => 'email',
+        'users_id' => 'nullable',
+        'iglesias_id' => 'nullable'
     ];
+
     
-    public function Activity() {
-        return $this->belongsToMany('App\Models\Activity', 'user_activities')->withPivot('order', 'is_registered');
-    }
 }

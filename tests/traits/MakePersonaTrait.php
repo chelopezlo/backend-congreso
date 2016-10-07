@@ -44,7 +44,7 @@ trait MakePersonaTrait
         return array_merge([
             'rut' => $fake->word,
             'full_name' => $fake->word,
-            'gender' => $fake->randomDigitNotNull,
+            'gender' => $fake->word,
             'birthday' => $fake->word,
             'occupation' => $fake->word,
             'address' => $fake->word,
@@ -53,6 +53,9 @@ trait MakePersonaTrait
             'description' => $fake->text,
             'facebook' => $fake->word,
             'twitter' => $fake->word,
+            'users_id' => $fake->randomDigitNotNull,
+            'is_leader' => $fake->word,
+            'iglesias_id' => $fake->randomDigitNotNull,
             'created_at' => $fake->word,
             'updated_at' => $fake->word
         ], $personaFields);

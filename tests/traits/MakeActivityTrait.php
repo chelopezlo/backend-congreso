@@ -45,8 +45,9 @@ trait MakeActivityTrait
             'name' => $fake->word,
             'description' => $fake->text,
             'color' => $fake->word,
-            'icon' => $fake->text,
+            'icon' => $fake->word,
             'is_selectable' => $fake->word,
+            'activity_type_id' => $fake->randomDigitNotNull,
             'created_at' => $fake->word,
             'updated_at' => $fake->word
         ], $activityFields);

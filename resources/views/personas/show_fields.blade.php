@@ -70,6 +70,24 @@
     <p>{!! $persona->twitter !!}</p>
 </div>
 
+<!-- Users Id Field -->
+<div class="form-group">
+    {!! Form::label('users_id', 'Users Id:') !!}
+    <p>{!! $persona->users_id !!}</p>
+</div>
+
+<!-- Is Leader Field -->
+<div class="form-group">
+    {!! Form::label('is_leader', 'Is Leader:') !!}
+    <p>{!! $persona->is_leader !!}</p>
+</div>
+
+<!-- Iglesias Id Field -->
+<div class="form-group">
+    {!! Form::label('iglesias_id', 'Iglesias Id:') !!}
+    <p>{!! $persona->iglesias_id !!}</p>
+</div>
+
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}

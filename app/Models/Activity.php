@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * @SWG\Definition(
  *      definition="Activity",
- *      required={"name"},
+ *      required={""},
  *      @SWG\Property(
  *          property="id",
  *          description="id",
@@ -41,6 +41,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          type="boolean"
  *      ),
  *      @SWG\Property(
+ *          property="activity_type_id",
+ *          description="activity_type_id",
+ *          type="integer",
+ *          format="int32"
+ *      ),
+ *      @SWG\Property(
  *          property="created_at",
  *          description="created_at",
  *          type="string",
@@ -69,7 +75,8 @@ class Activity extends Model
         'description',
         'color',
         'icon',
-        'is_selectable'
+        'is_selectable',
+        'activity_type_id'
     ];
 
     /**
@@ -82,7 +89,8 @@ class Activity extends Model
         'description' => 'string',
         'color' => 'string',
         'icon' => 'string',
-        'is_selectable' => 'boolean'
+        'is_selectable' => 'boolean',
+        'activity_type_id' => 'integer'
     ];
 
     /**
@@ -91,10 +99,8 @@ class Activity extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required'
+        
     ];
 
-    public function Persona() {
-        return $this->belongsToMany('App\Models\Persona', 'user_activities');
-    }
+    
 }

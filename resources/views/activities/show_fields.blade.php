@@ -34,6 +34,12 @@
     <p>{!! $activity->is_selectable !!}</p>
 </div>
 
+<!-- Activity Type Id Field -->
+<div class="form-group">
+    {!! Form::label('activity_type_id', 'Activity Type Id:') !!}
+    <p>{!! $activity->activity_type_id !!}</p>
+</div>
+
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}

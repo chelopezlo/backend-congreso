@@ -51,10 +51,16 @@ Route::resource('userTypes', 'UserTypeController');
 
 Route::resource('userActivityTemplates', 'UserActivityTemplateController');
 
-Route::resource('activities', 'ActivityController');
+
 
 Route::resource('userActivities', 'UserActivityController');
 
 Route::resource('activitySchedules', 'ActivityScheduleController');
 
 Route::resource('despositos', 'DespositoController');
+
+
+
+Route::resource('activities', 'ActivityController');
+
+Route::resource('personas', 'PersonaController');

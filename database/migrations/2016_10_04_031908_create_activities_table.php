@@ -18,10 +18,12 @@ class CreateActivitiesTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('color');
-            $table->text('icon');
+            $table->string('icon');
             $table->boolean('is_selectable');
+            $table->integer('activity_type_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('activity_type_id')->references('id')->on('ativity_types');
         });
     }
 

@@ -11,6 +11,9 @@
         <th>Description</th>
         <th>Facebook</th>
         <th>Twitter</th>
+        <th>Users Id</th>
+        <th>Is Leader</th>
+        <th>Iglesias Id</th>
         <th>Created At</th>
         <th>Updated At</th>
         <th colspan="3">Action</th>
@@ -29,6 +32,9 @@
             <td>{!! $persona->description !!}</td>
             <td>{!! $persona->facebook !!}</td>
             <td>{!! $persona->twitter !!}</td>
+            <td>{!! $persona->users_id !!}</td>
+            <td>{!! $persona->is_leader !!}</td>
+            <td>{!! $persona->iglesias_id !!}</td>
             <td>{!! $persona->created_at !!}</td>
             <td>{!! $persona->updated_at !!}</td>
             <td>

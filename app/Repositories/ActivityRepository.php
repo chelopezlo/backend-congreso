@@ -15,7 +15,8 @@ class ActivityRepository extends BaseRepository
         'description',
         'color',
         'icon',
-        'is_selectable'
+        'is_selectable',
+        'activity_type_id'
     ];
 
     /**
