@@ -164,5 +164,8 @@ class Persona extends Model
         'iglesias_id' => 'nullable'
     ];
 
+    public function Activity() {
+        return $this->belongsToMany('App\Models\Activity', 'user_activities')->withPivot('order', 'is_registered');
+    }
     
 }
