@@ -15,19 +15,27 @@ class CreatePersonasTable extends Migration
     {
         Schema::create('personas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('rut', 15)->unique();
-            $table->string('full_name', 200);
-            $table->integer('gender', false, true);
+            $table->string('code')->unique();
+            $table->string('rut')->unique();
+            $table->string('full_name');
+            $table->boolean('gender');
             $table->date('birthday');
             $table->string('occupation');
             $table->string('address');
             $table->string('phone');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->text('description');
             $table->string('facebook');
             $table->string('twitter');
+            $table->integer('users_id')->unsigned();
+            $table->boolean('is_leader');
+            $table->integer('iglesias_id')->unsigned();
+            $table->integer('comunas_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('users_id')->references('id')->on('users');
+            $table->foreign('iglesias_id')->references('id')->on('iglesias');
+            $table->foreign('comunas_id')->references('id')->on('comunas');
         });
     }
 

@@ -23,7 +23,6 @@ class CreateActivitiesTable extends Migration
             $table->integer('activity_type_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('activity_type_id')->references('id')->on('ativity_types');
         });
     }
 
