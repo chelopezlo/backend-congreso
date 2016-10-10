@@ -137,7 +137,7 @@ class Persona extends Model
     protected $casts = [
         'rut' => 'string',
         'full_name' => 'string',
-        'gender' => 'boolean',
+        'gender' => 'integer',
         'birthday' => 'date',
         'occupation' => 'string',
         'address' => 'string',
@@ -147,7 +147,7 @@ class Persona extends Model
         'facebook' => 'string',
         'twitter' => 'string',
         'users_id' => 'integer',
-        'is_leader' => 'boolean',
+        'is_leader' => 'integer',
         'iglesias_id' => 'integer'
     ];
 

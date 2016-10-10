@@ -18,7 +18,7 @@ class CreatePersonasTable extends Migration
             $table->string('code')->unique();
             $table->string('rut')->unique();
             $table->string('full_name');
-            $table->boolean('gender');
+            $table->integer('gender');
             $table->date('birthday');
             $table->string('occupation');
             $table->string('address');
@@ -28,7 +28,7 @@ class CreatePersonasTable extends Migration
             $table->string('facebook');
             $table->string('twitter');
             $table->integer('users_id')->unsigned();
-            $table->boolean('is_leader');
+            $table->integer('is_leader');
             $table->integer('iglesias_id')->unsigned();
             $table->integer('comunas_id')->unsigned();
             $table->timestamps();

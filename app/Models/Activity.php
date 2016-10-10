@@ -89,7 +89,7 @@ class Activity extends Model
         'description' => 'string',
         'color' => 'string',
         'icon' => 'string',
-        'is_selectable' => 'boolean',
+        'is_selectable' => 'integer',
         'activity_type_id' => 'integer'
     ];
 

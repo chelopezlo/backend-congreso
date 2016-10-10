@@ -16,7 +16,7 @@ class CreateUserActivitiesTable extends Migration
         Schema::create('user_activities', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('order');
-            $table->boolean('is_registered');
+            $table->integer('is_registered');
             $table->date('registrarion_date');
             $table->string('registrated_by');
             $table->integer('persona_id')->unsigned();

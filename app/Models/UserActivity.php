@@ -89,7 +89,7 @@ class UserActivity extends Model
      */
     protected $casts = [
         'order' => 'integer',
-        'is_registered' => 'boolean',
+        'is_registered' => 'integer',
         'registrarion_date' => 'date',
         'registrated_by' => 'string',
         'persona_id' => 'integer',
@@ -104,7 +104,7 @@ class UserActivity extends Model
     public static $rules = [
         
     ];
-
+   
     public function Activity()
     {
         return $this->hasOne('App\Models\Activity');

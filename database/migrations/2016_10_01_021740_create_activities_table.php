@@ -19,7 +19,7 @@ class CreateActivitiesTable extends Migration
             $table->text('description');
             $table->string('color');
             $table->string('icon');
-            $table->boolean('is_selectable');
+            $table->integer('is_selectable');
             $table->integer('activity_type_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
