@@ -63,7 +63,15 @@ class PersonaAPIController extends AppBaseController
     {
         $this->personaRepository->pushCriteria(new RequestCriteria($request));
         $this->personaRepository->pushCriteria(new LimitOffsetCriteria($request));
-        $personas = $this->personaRepository->all();
+        $q = $request->get('q');
+        $where = array(
+            ['rut', 'like', "%$q%"],        
+            ['full_name', 'like', "%$q%"],       
+            ['code', 'like', "%$q%"]
+        );
+        $personas = $this->personaRepository->findOrWhere($where);
+
+
 
         return $this->sendResponse($personas->toArray(), 'Personas retrieved successfully');
     }

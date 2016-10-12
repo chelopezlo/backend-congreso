@@ -34,4 +34,38 @@ class PersonaRepository extends BaseRepository
     {
         return Persona::class;
     }
+    
+        /**
+     * Find data by multiple fields
+     *
+     * @param array $where
+     * @param array $columns
+     *
+     * @return mixed
+     */
+    public function findOrWhere(array $where, $columns = ['*'])
+    {
+        $this->applyCriteria();
+        $this->applyScope();
+
+        $this->applyConditionsOr($where);
+
+        $model = $this->model->get($columns);
+        $this->resetModel();
+
+        return $this->parserResult($model);
+    }
+    
+    protected function applyConditionsOr(array $where)
+    {
+        foreach ($where as $field => $value) {
+            if (is_array($value)) {
+                list($field, $condition, $val) = $value;
+                $this->model = $this->model->orWhere($field, $condition, $val);
+            } else {
+                $this->model = $this->model->orWhere($field, '=', $value);
+            }
+        }
+    }
+
 }
