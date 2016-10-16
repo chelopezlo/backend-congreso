@@ -71,8 +71,6 @@ class PersonaAPIController extends AppBaseController
         );
         $personas = $this->personaRepository->findOrWhere($where);
 
-
-
         return $this->sendResponse($personas->toArray(), 'Personas retrieved successfully');
     }
 

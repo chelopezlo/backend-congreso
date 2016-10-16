@@ -165,7 +165,11 @@ class Persona extends Model
     ];
 
     public function Activity() {
-        return $this->belongsToMany('App\Models\Activity', 'user_activities')->withPivot('id', 'order', 'is_registered');
+        return $this->belongsToMany('App\Models\Activity', 'user_activities')->withPivot('id', 'order', 'is_registered')->with('ActivityType');
+    }
+    
+    public function ActivityType() {
+        return $this->hasManyThrough('App\Models\ActivityType', 'App\Models\Activity');
     }
     
 }

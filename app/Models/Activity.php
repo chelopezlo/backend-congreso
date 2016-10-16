@@ -103,7 +103,10 @@ class Activity extends Model
     ];
 
     public function Persona() {
-        return $this->belongsToMany('App\Models\Persona', 'user_activities');
+        return $this->belongsToMany('App\Models\Persona', 'user_activities')->with('ActivityType');
     }
     
+    public function ActivityType() {
+        return $this->belongsTo('App\Models\ActivityType');
+    }
 }
