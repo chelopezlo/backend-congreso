@@ -4,21 +4,16 @@
     {!! Form::text('rut', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Rut Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('code', 'Code:') !!}
+    {!! Form::text('code', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Full Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('full_name', 'Full Name:') !!}
     {!! Form::text('full_name', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Gender Field -->
-<div class="form-group col-sm-12">
-    {!! Form::label('gender', 'Gender:') !!}
-    <label class="radio-inline">
-        {!! Form::radio('gender', "Male", null) !!} Male
-    </label>
-    <label class="radio-inline">
-        {!! Form::radio('gender', "Female", null) !!} Female
-    </label>
 </div>
 
 <!-- Birthday Field -->
@@ -57,6 +52,17 @@
     {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Gender Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('gender', 'Gender:') !!}
+    <label class="radio-inline">
+        {!! Form::radio('gender', 1, null) !!} Masculino
+    </label>
+    <label class="radio-inline">
+        {!! Form::radio('gender', 0, null) !!} Femenino
+    </label>
+</div>
+
 <!-- Facebook Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('facebook', 'Facebook:') !!}
@@ -73,10 +79,10 @@
 <div class="form-group col-sm-12">
     {!! Form::label('is_leader', 'Is Leader:') !!}
     <label class="radio-inline">
-        {!! Form::radio('is_leader', "1", null) !!} 1
+        {!! Form::radio('is_leader', "1", null) !!} S&iacute;
     </label>
     <label class="radio-inline">
-        {!! Form::radio('is_leader', "0", null) !!} 0
+        {!! Form::radio('is_leader', "0", null) !!} No
     </label>
 </div>
 

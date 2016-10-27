@@ -23,7 +23,7 @@
 </li>
 
 <li class="{{ Request::is('inscripcions*') ? 'active' : '' }}">
-    <a href="{!! route('inscripcions.index') !!}"><i class="fa fa-edit"></i><span>Inscripcions</span></a>
+    <a href="{!! route('inscripcions.index') !!}"><i class="fa fa-edit"></i><span>Inscripciones</span></a>
 </li>
 
 <li class="{{ Request::is('userTypes*') ? 'active' : '' }}">

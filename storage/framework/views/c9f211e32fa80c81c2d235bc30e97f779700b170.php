@@ -6,24 +6,20 @@
 
 </div>
 
+<!-- Rut Field -->
+<div class="form-group col-sm-6">
+    <?php echo Form::label('code', 'Code:'); ?>
+
+    <?php echo Form::text('code', null, ['class' => 'form-control']); ?>
+
+</div>
+
 <!-- Full Name Field -->
 <div class="form-group col-sm-6">
     <?php echo Form::label('full_name', 'Full Name:'); ?>
 
     <?php echo Form::text('full_name', null, ['class' => 'form-control']); ?>
 
-</div>
-
-<!-- Gender Field -->
-<div class="form-group col-sm-12">
-    <?php echo Form::label('gender', 'Gender:'); ?>
-
-    <label class="radio-inline">
-        <?php echo Form::radio('gender', "Hombre", null); ?> Hombre
-    </label>
-    <label class="radio-inline">
-        <?php echo Form::radio('gender', "Mujer", null); ?> Mujer
-    </label>
 </div>
 
 <!-- Birthday Field -->
@@ -67,11 +63,23 @@
 </div>
 
 <!-- Description Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12 col-lg-12">
     <?php echo Form::label('description', 'Description:'); ?>
 
-    <?php echo Form::text('description', null, ['class' => 'form-control']); ?>
+    <?php echo Form::textarea('description', null, ['class' => 'form-control']); ?>
 
+</div>
+
+<!-- Gender Field -->
+<div class="form-group col-sm-12">
+    <?php echo Form::label('gender', 'Gender:'); ?>
+
+    <label class="radio-inline">
+        <?php echo Form::radio('gender', 1, null); ?> Masculino
+    </label>
+    <label class="radio-inline">
+        <?php echo Form::radio('gender', 0, null); ?> Femenino
+    </label>
 </div>
 
 <!-- Facebook Field -->
@@ -88,6 +96,18 @@
 
     <?php echo Form::text('twitter', null, ['class' => 'form-control']); ?>
 
+</div>
+
+<!-- Is Leader Field -->
+<div class="form-group col-sm-12">
+    <?php echo Form::label('is_leader', 'Is Leader:'); ?>
+
+    <label class="radio-inline">
+        <?php echo Form::radio('is_leader', "1", null); ?> S&iacute;
+    </label>
+    <label class="radio-inline">
+        <?php echo Form::radio('is_leader', "0", null); ?> No
+    </label>
 </div>
 
 <!-- Submit Field -->

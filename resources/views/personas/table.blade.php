@@ -1,6 +1,7 @@
 <table class="table table-responsive" id="personas-table">
     <thead>
         <th>Rut</th>
+        <th>Code</th>        
         <th>Full Name</th>
         <th>Gender</th>
         <th>Birthday</th>
@@ -22,6 +23,7 @@
     @foreach($personas as $persona)
         <tr>
             <td>{!! $persona->rut !!}</td>
+            <td>{!! $persona->code !!}</td>
             <td>{!! $persona->full_name !!}</td>
             <td>{!! $persona->gender !!}</td>
             <td>{!! $persona->birthday !!}</td>

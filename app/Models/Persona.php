@@ -114,6 +114,7 @@ class Persona extends Model
 
     public $fillable = [
         'rut',
+        'code',
         'full_name',
         'gender',
         'birthday',
@@ -136,6 +137,7 @@ class Persona extends Model
      */
     protected $casts = [
         'rut' => 'string',
+        'code' => 'string',
         'full_name' => 'string',
         'gender' => 'integer',
         'birthday' => 'date',

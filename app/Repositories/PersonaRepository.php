@@ -12,6 +12,7 @@ class PersonaRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'rut',
+        'code',
         'full_name',
         'gender',
         'birthday',

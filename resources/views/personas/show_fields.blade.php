@@ -10,6 +10,12 @@
     <p>{!! $persona->rut !!}</p>
 </div>
 
+<!-- Code Field -->
+<div class="form-group">
+    {!! Form::label('code', 'Code:') !!}
+    <p>{!! $persona->code !!}</p>
+</div>
+
 <!-- Full Name Field -->
 <div class="form-group">
     {!! Form::label('full_name', 'Full Name:') !!}

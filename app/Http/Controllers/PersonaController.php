@@ -57,6 +57,16 @@ class PersonaController extends AppBaseController
     {
         $input = $request->all();
 
+        app('App\Http\Controllers\PrintReportContoller')->getPrintReport();
+        
+        $user = Illuminate\Foundation\Auth\User::create([
+            'name' => $input['full_name'],
+            'email' => $input['email'],
+            'password' => bcrypt($input['rut']),
+        ]);
+        
+        
+        $input['user_id'] = 1;//$user['id'];
         $persona = $this->personaRepository->create($input);
 
         Flash::success('Persona saved successfully.');
