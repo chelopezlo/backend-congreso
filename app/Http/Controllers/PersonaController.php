@@ -35,6 +35,21 @@ class PersonaController extends AppBaseController
         return view('personas.index')
             ->with('personas', $personas);
     }
+    
+     /**
+     * Display a listing of the Persona.
+     *
+     * @param Request $request
+     * @return Response
+     */
+    public function search(Request $request)
+    {
+        $this->personaRepository->pushCriteria(new RequestCriteria($request));
+        $personas = $this->personaRepository->with('Activity')->findByField('code', $code)->first();
+
+        return view('personas.index')
+            ->with('personas', $personas);
+    }
 
     /**
      * Show the form for creating a new Persona.
