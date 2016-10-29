@@ -71,5 +71,11 @@ class ActivitySchedule extends Model
         
     ];
 
+    public function UserActivity() {
+        return $this->hasMany('App\Models\UserActivity');
+    }
     
+        public function Activity() {
+        return $this->belongsTo('App\Models\Activity');
+    }
 }

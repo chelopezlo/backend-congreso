@@ -109,4 +109,8 @@ class Activity extends Model
     public function ActivityType() {
         return $this->belongsTo('App\Models\ActivityType');
     }
+    
+    public function ActivitySchedule() {
+        return $this->hasMany('App\Models\ActivitySchedule');
+    }
 }

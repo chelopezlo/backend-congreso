@@ -113,5 +113,8 @@ class UserActivity extends Model
     public function Persona() {
         return $this->belongsTo('App\Models\Persona');
     }
-    
+        
+    public function Schedule() {
+        return $this->belongsTo('App\Models\ActivitySchedule', 'activity_schedule_id');
+    }
 }

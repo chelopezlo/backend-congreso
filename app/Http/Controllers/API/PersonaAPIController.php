@@ -162,12 +162,18 @@ class PersonaAPIController extends AppBaseController
     public function show($code)
     {
         /** @var Persona $persona */
-        $persona = $this->personaRepository->with('Activity')->findByField('code', $code)->first();
-
+        //$persona = $this->personaRepository->with('Activity.ActivitySchedule')->findByField('code', $code)->first();
+        $persona = $this->personaRepository->with('UserActivity')->findByField('code', $code)->first();
         if (empty($persona)) {
             return $this->sendError('Persona not found');
         }
 
+        $persona->UserActivity->load('Schedule');
+        foreach($persona->UserActivity as $userActivity )
+        {
+            $userActivity->Schedule->load('Activity');
+        }
+        //$persona->UserActivity->schedule->load('Activity');
         return $this->sendResponse($persona->toArray(), 'Persona retrieved successfully');
     }
 
