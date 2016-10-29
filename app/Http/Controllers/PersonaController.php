@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreatePersonaRequest;
 use App\Http\Requests\UpdatePersonaRequest;
 use App\Repositories\PersonaRepository;
+use App\Models\UserActivity;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
