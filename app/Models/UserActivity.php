@@ -79,7 +79,8 @@ class UserActivity extends Model
         'registrarion_date',
         'registrated_by',
         'persona_id',
-        'activity_id'
+        'activity_id',
+        'activity_schedule_id'
     ];
 
     /**
@@ -93,7 +94,8 @@ class UserActivity extends Model
         'registrarion_date' => 'date',
         'registrated_by' => 'string',
         'persona_id' => 'integer',
-        'activity_id' => 'integer'
+        'activity_id' => 'integer',
+        'activity_schedule_id' => 'integer'
     ];
 
     /**
