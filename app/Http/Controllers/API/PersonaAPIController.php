@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Requests\API\CreatePersonaAPIRequest;
 use App\Http\Requests\API\UpdatePersonaAPIRequest;
 use App\Models\Persona;
+use App\Models\UserActivity;
 use App\Repositories\PersonaRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
@@ -173,6 +174,7 @@ class PersonaAPIController extends AppBaseController
         {
             $userActivity->Schedule->load('Activity');
         }
+        
         //$persona->UserActivity->schedule->load('Activity');
         return $this->sendResponse($persona->toArray(), 'Persona retrieved successfully');
     }

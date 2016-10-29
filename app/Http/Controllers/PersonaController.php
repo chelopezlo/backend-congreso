@@ -45,10 +45,26 @@ class PersonaController extends AppBaseController
     public function search(Request $request)
     {
         $this->personaRepository->pushCriteria(new RequestCriteria($request));
-        $personas = $this->personaRepository->with('Activity')->findByField('code', $code)->first();
+        $q = $request->get('q');
+        $where = array(
+            ['rut', 'like', "%$q%"],        
+            ['full_name', 'like', "%$q%"],       
+            ['code', 'like', "%$q%"]
+        );
+        $personas = $this->personaRepository->findOrWhere($where);
 
         return view('personas.index')
             ->with('personas', $personas);
+    }
+    
+        /**
+     * Show the form for creating a new Persona.
+     *
+     * @return Response
+     */
+    public function searchForm()
+    {
+        return view('search');
     }
 
     /**
@@ -148,6 +164,18 @@ class PersonaController extends AppBaseController
         }
 
         $persona = $this->personaRepository->update($request->all(), $id);
+        
+        $persona->load('UserActivity');
+        
+        if($persona->UserActivity->contains('activity_id', 1) == FALSE)
+        {
+            $usAc = new UserActivity;
+            $usAc->is_registered = 0;
+            $usAc->persona_id = $persona->id;
+            $usAc->activity_id = 1;
+            $usAc->activity_schedule_id = 1;
+            $usAc->save();
+        }
 
         Flash::success('Persona updated successfully.');
 

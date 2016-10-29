@@ -6,37 +6,37 @@
 
 <!-- Rut Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('code', 'Code:') !!}
+    {!! Form::label('code', 'QR:') !!}
     {!! Form::text('code', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Full Name Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('full_name', 'Full Name:') !!}
+    {!! Form::label('full_name', 'Nombre:') !!}
     {!! Form::text('full_name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Birthday Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('birthday', 'Birthday:') !!}
+    {!! Form::label('birthday', 'Fecha de nacimiento:') !!}
     {!! Form::date('birthday', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Occupation Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('occupation', 'Occupation:') !!}
+    {!! Form::label('occupation', 'Ocupaci&oacute;n:') !!}
     {!! Form::text('occupation', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Address Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('address', 'Address:') !!}
+    {!! Form::label('address', 'Direcci&oacute;n:') !!}
     {!! Form::text('address', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Phone Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('phone', 'Phone:') !!}
+    {!! Form::label('phone', 'Tel&eacute;fono:') !!}
     {!! Form::text('phone', null, ['class' => 'form-control']) !!}
 </div>
 
@@ -54,7 +54,7 @@
 
 <!-- Gender Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('gender', 'Gender:') !!}
+    {!! Form::label('gender', 'Genero:') !!}
     <label class="radio-inline">
         {!! Form::radio('gender', 1, null) !!} Masculino
     </label>
@@ -77,7 +77,7 @@
 
 <!-- Is Leader Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('is_leader', 'Is Leader:') !!}
+    {!! Form::label('is_leader', 'Es L&iacute;der:') !!}
     <label class="radio-inline">
         {!! Form::radio('is_leader', "1", null) !!} S&iacute;
     </label>
